@@ -1,0 +1,173 @@
+
+.lspace{
+    margin-left: 12px;
+}
+.palletMedia{
+    padding: 2rem;
+}
+.dropDown{
+    display: flex;
+   margin-left: 11%;
+   gap: 3%;
+}
+.wholeComp{
+   margin-left: 20%;
+   margin-right: 2%;
+   margin-top: 5%;
+   padding: 2rem;
+}
+.Porder{
+    margin-top: auto;
+    margin-bottom: 3%;
+}
+.twoDropdown{
+    display: flex;
+    gap: 2%;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    
+    
+}
+.Pdate{
+    margin-left: 4px;
+
+}
+.Thead{
+    background-color: #6960EC;
+}
+.palletReport{
+    margin-top: 5%;
+    margin-left: 20%;
+}
+.palletTable{
+    margin-left: 20%;
+    margin-right: 1%;
+    margin-top: 4%;
+}
+.daterangepicker{
+    height: fit-content;
+    background-color: rgb(212, 212, 212);
+    cursor: pointer;
+}
+.inputFilterBY{
+    margin-top: 3px;
+}
+.inputF{
+    padding: 5px;
+    border-radius: 4px;
+    color: black;
+}
+
+.inputF:hover{
+   background-color: rgb(212, 212, 212);
+}
+
+@media screen and (max-width: 1200px){
+    .wholeComp{
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width: 1040px){
+    .wholeComp{
+        margin-left: 29%;
+        margin-top: 7%;
+    }
+}
+@media screen and (max-width: 992px){
+    .wholeComp{
+        margin-left: 2%;
+        margin-right: 6%;
+    }
+}
+@media screen and (max-width: 771px){
+    .wholeComp{
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width: 550px){
+    .wholeComp{
+        margin-top: 14%;
+    }
+}
+@media screen and (max-width: 400px){
+    .wholeComp{
+        margin-top: 18%;
+    }
+}
+@media screen and (max-width: 550px){
+    .purchaseTable{
+        margin-right: 3%;
+    }
+}
+@media screen and (max-width: 484px){
+    .purchaseTable{
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .palletMedia{
+        margin-left: 7%;
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width: 1030px){
+    .palletMedia{
+        margin-left: 9%;
+        margin-top: 6%;
+    }
+}
+@media screen and (max-width: 991px){
+    .palletMedia{
+        margin-left: 0%;
+        margin-top: 10%;
+        margin-right: 6;
+    }
+}
+@media screen and (max-width: 991px){
+    .palletTable{
+        margin-left: 1%;
+       
+    }
+}
+@media screen and (max-width: 991px){
+    .palletReport{
+        
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 608px){
+    .palletMedia{
+        margin-left: 0%;
+        margin-top: 14%;
+    }
+}
+@media screen and (max-width: 422px){
+    .palletMedia{
+     
+        margin-top: 18%;
+    }
+}
+@media screen and (max-width: 334px){
+    .palletMedia{
+     
+        margin-top: 23%;
+    }
+}
+
+
+
+
+
+
+  
+  
+ 
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+@media print {
+ 
+  .productdetails {
+    font-size: 12px;
+    margin: 10mm;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+
+  .product-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left side */
+  }
+
+  .product-bar li {
+    margin-bottom: 0; /* Remove space between elements */
+    text-align: left; /* Align to the left side */
+    width: 100%; /* Set width to 100% */
+  }
+
+  .product-bar h4,
+  .product-bar h6 {
+    display: inline-block;
+    width: 45%; /* Set width to 45% */
+    vertical-align: top; /* Align text to the top */
+  }
+
+  .product-bar h4 {
+    font-weight: bold;
+  }
+
+
+
+  .bar-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left side */
+    margin-top: 30px; /* Add margin-top */
+    margin-bottom: 20px; /* Add margin-bottom */
+    justify-content: flex-start; /* Add this line */
+  }
+
+  .barcode_view {
+    width: 100%;
+    max-width: 200px;
+    padding: 1px;
+    height: auto;
+    margin-left: 0; /* Remove margin-left */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(191, 187, 187);
+
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+
+  
+}
