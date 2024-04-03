@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { adminApiInstance } from "../../api/axios";
 import FeatherIcon from "feather-icons-react";
 import { toast } from "react-toastify";
 
 const AddCategory = () => {
-  const [scannedBarcode, setScannedBarcode] = useState("");
-  const [loadDetails, setLoadDetails] = useState(null);
-  const [allLoads, setAllLoads] = useState([]);
-  const [palletsCountToUse, setPalletsCountToUse] = useState(0);
+  const [scannedBarcode, setScannedBarcode] = React.useState("");
+  const [loadDetails, setLoadDetails] = React.useState(null);
+  const [allLoads, setAllLoads] = React.useState([]);
+  const [palletsCountToUse, setPalletsCountToUse] = React.useState("");
 
   const barcodeInputRef = useRef(null);
 
@@ -49,7 +49,7 @@ const AddCategory = () => {
   };
 
   const handlePalletsCountChange = (e) => {
-    setPalletsCountToUse(parseInt(e.target.value, 10) || 0);
+    setPalletsCountToUse(e.target.value);
   };
 
   const handleUpdateAndSubmit = async () => {
@@ -78,11 +78,30 @@ const AddCategory = () => {
       setLoadDetails(updatedDetails);
 
       setScannedBarcode("");
-      setPalletsCountToUse(0);
+      setPalletsCountToUse("");
 
       console.log("Pallets count updated successfully!");
     } catch (error) {
       console.error("Error updating pallets count:", error);
+    }
+  };
+
+  const handleInputFocus = () => {
+    if (palletsCountToUse === "0") {
+      setPalletsCountToUse("");
+    }
+  };
+
+  const handleInputBlur = () => {
+    if (palletsCountToUse === "") {
+      setPalletsCountToUse("0");
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Backspace" && palletsCountToUse === "0") {
+      e.preventDefault();
+      setPalletsCountToUse("");
     }
   };
 
@@ -128,8 +147,12 @@ const AddCategory = () => {
                     type="number"
                     id="palletsCount"
                     className="form-control"
+                    placeholder="Please enter the count"
                     value={palletsCountToUse}
                     onChange={handlePalletsCountChange}
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
+                    onKeyDown={handleKeyDown}
                   />
                 </div>
               </div>
@@ -142,8 +165,8 @@ const AddCategory = () => {
                       <h6 className="manitorygreen">
                         {loadDetails?.loadNumber || "Loading..."}
                       </h6>
-                      </li>
-                      <li>
+                    </li>
+                    <li>
                       <h4>Category</h4>
                       <h6 className="manitorygreen">
                         {loadDetails?.category.name || "Loading..."}
@@ -245,5 +268,3 @@ const AddCategory = () => {
 };
 
 export default AddCategory;
-
-                   
