@@ -1,4 +1,8 @@
 @media print {
+
+  li.hidden {
+    display: block !important;
+  }
  
   .productdetails {
     font-size: 12px;
