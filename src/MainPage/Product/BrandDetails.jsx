@@ -82,10 +82,10 @@ const BrandDetails = ({ item, loadNumber, category }) => {
             <h4>Brand Name</h4>
             <h6>{item.brandName}</h6>
           </li>
-          <li>
-            <h4>Pallet Number</h4>
-            <h6 className="pallet-number" >{palletNumbers}</h6>
-          </li>
+          <li className="hidden" hidden>
+  <h4>Pallet Number</h4>
+  <h6 className="pallet-number">{palletNumbers}</h6>
+</li>
           <li>
             <h4>Total Pallet</h4>
             <h6>{item.totalPallet}</h6>

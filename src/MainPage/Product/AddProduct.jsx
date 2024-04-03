@@ -346,17 +346,7 @@ const handleInputChange = (e) => {
                               placeholder={`Total Pallet`}
                             />
                           </div>
-                          <div className="flex-grow-1 m-2" >
-                          <label style={{ fontSize: 'small' }}>Pallets Count</label>
-                            <input
-
-                              type="text"
-                              name={`brands[${index}].palletNumbers`}
-                              value={`1-${brand.totalPallet}`}
-                              className="form-control"
-                              placeholder={`Pallet Number`}
-                            />
-                          </div>
+                         
                           <div className="flex-grow-1 m-2">
                           <label style={{ fontSize: 'small' }}>Total Price</label>
                             <input
