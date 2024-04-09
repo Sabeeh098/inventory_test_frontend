@@ -160,7 +160,7 @@ const handleInputChange = (e) => {
         loadCost: "",
         palletsCount: 0,
         perPalletCost: 0,
-        category: "",
+        category: "", 
         loadDate: "",
         skuCode: "",
         isBrands: false,

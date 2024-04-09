@@ -2,8 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Table from "../../EntryFile/datatable";
-import { Link } from "react-router-dom";
-import { PlusIcon } from "../../EntryFile/imagePath";
+
 import { adminApiInstance } from "../../api/axios";
 import { BsUpcScan } from "react-icons/bs";
 import UpdateDetailsModal from "./UpdateDetailsModal";
@@ -51,11 +50,12 @@ const ScanInScanOut = () => {
     },
     {
       title: "Scan In",
-      dataIndex: "palletsCount",
       render: (text, record) => (
-        <span className="badges bg-lightyellow">{text}</span>
+        <span className="badges bg-lightyellow">
+          {record.palletsCount - record.remainingPalletsCount}
+        </span>
       ),
-      sorter: (a, b) => a.palletsCount - b.palletsCount,
+      sorter: (a, b) => (a.palletsCount - a.remainingPalletsCount) - (b.palletsCount - b.remainingPalletsCount),
     },
     {
       title: "Scan Out",
@@ -109,8 +109,8 @@ const ScanInScanOut = () => {
         <div className="content">
           <div className="page-header">
             <div className="page-title">
-              <h4>Purchase List</h4>
-              <h6>Manage your Purchase</h6>
+              <h4>Scan In Scan Out</h4>
+              <h6>Manage your Scan In and Scan Out</h6>
             </div>
            
           </div>

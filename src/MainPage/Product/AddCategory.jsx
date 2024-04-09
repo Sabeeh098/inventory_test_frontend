@@ -3,6 +3,7 @@ import { adminApiInstance } from "../../api/axios";
 import FeatherIcon from "feather-icons-react";
 import { toast } from "react-toastify";
 
+
 const AddCategory = () => {
   const [scannedBarcode, setScannedBarcode] = React.useState("");
   const [loadDetails, setLoadDetails] = React.useState(null);
@@ -14,6 +15,10 @@ const AddCategory = () => {
   useEffect(() => {
     fetchAllLoads();
   }, []);
+
+  useEffect(() => {
+    handleSearch();
+  }, [scannedBarcode]);
 
   const fetchAllLoads = async () => {
     try {
@@ -79,7 +84,7 @@ const AddCategory = () => {
 
       setScannedBarcode("");
       setPalletsCountToUse("");
-
+      toast.success("Pallets count updated successfully!");
       console.log("Pallets count updated successfully!");
     } catch (error) {
       console.error("Error updating pallets count:", error);

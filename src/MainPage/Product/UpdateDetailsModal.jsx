@@ -39,12 +39,12 @@ const UpdateDetailsModal = ({ onCancel, onUpdate, data }) => {
         <label htmlFor="palletsCount">New Pallets Count:</label>
       </div>
       <div>
-        <input
-          type="number"
-          id="palletsCount"
-          value={count}
-          onChange={handleCountChange}
-        />
+      <input
+  type="number"
+  id="palletsCount"
+  placeholder="Enter the count"
+  onChange={handleCountChange}
+/>
       </div>
     </Modal>
   );
